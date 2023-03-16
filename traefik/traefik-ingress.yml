@@ -3,7 +3,9 @@ kind: Ingress
 metadata:
   name: whoami-ingress
   annotations:
+    kubernetes.io/ingress.class: "traefik"
     traefik.ingress.kubernetes.io/router.entrypoints: http,https
+    traefik.ingress.kubernetes.io/router.tls: "true"
 spec:
   rules:
     - host: localhost.com
@@ -15,4 +17,4 @@ spec:
               service:
                 name: whoami-service
                 port:
-                  number: 80
+                  name: http
