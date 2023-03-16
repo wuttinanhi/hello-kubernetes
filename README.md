@@ -16,12 +16,6 @@ deploy a single yml
 kubectl apply -f deployments/deployment.yml
 ```
 
-delete all created resources
-
-```
-kubectl delete all --all
-```
-
 delete all created resources in a folder
 
 ```
